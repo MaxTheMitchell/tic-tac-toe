@@ -9,7 +9,7 @@ class Game
   end
 
   def over?
-    false
+    board.full?
   end
 
 end
