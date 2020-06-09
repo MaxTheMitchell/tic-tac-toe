@@ -24,4 +24,13 @@ describe "A Tic Tac Toe board" do
     expect(board.token_at(:top,:left)).to eq(:fake)
   end
 
+  it 'is empty at first' do
+    expect(board).to be_empty
+  end
+
+  it 'is no longer empty when a token is placed' do 
+    board.place(:fake,:top,:left)
+    expect(board).to_not be_empty
+  end
+
 end
