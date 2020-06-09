@@ -15,9 +15,13 @@ describe "A Tic Tac Toe board" do
     expect(Board.new("FAKE").locations).to eq("FAKE")
   end
 
-  # it 'can place tokens'
-  #   board.place(:fake,1,1)
-  #   board.locations
-  # end
+  it 'can place tokens' do
+    expect(board).to respond_to(:place)
+  end
+
+  it 'can get a paced token at a specify row and column' do
+    board.place(:fake,:top,:left)
+    expect(board.token_at(:top,:left)).to eq(:fake)
+  end
 
 end
