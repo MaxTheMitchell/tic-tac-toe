@@ -16,6 +16,11 @@ class Game
   end
 
   def winner
-    nil
+    board.locations.values.each do |row|
+      if row.values.uniq.length == 1 and (row[:left] == :o or row[:left] == :x)
+        return row[:left]
+      end
+    end
+    return nil
   end
 end
