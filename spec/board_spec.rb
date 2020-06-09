@@ -39,7 +39,7 @@ describe "A Tic Tac Toe board" do
     expect(board).to be_empty
   end
 
-  it 'is full when all the rows in locations 3 values' do 
+  it 'is full when all the rows in locations have 3 values' do 
     expect(Board.new({top:{left: 1,middle: 2,right: 3}})).to be_full
   end
 end
