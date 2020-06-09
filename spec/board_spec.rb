@@ -33,4 +33,9 @@ describe "A Tic Tac Toe board" do
     expect(board).to_not be_empty
   end
 
+  it 'becomes empty when it is reset' do 
+    board.place(:fake,:top,:left)
+    board.reset
+    expect(board).to be_empty
+  end
 end
