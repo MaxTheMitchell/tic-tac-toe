@@ -1,4 +1,15 @@
-require_relative 'board'
+require_relative "board"
 
-class Fixme
+class Game
+
+  attr_reader :board
+  
+  def initialize(board = Board.new)
+    @board = board
+  end
+
+  def over?
+    false
+  end
+
 end
